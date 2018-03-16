@@ -26,12 +26,32 @@ describe('Age', function() {
     expect(testAge.dateDifference(date1,date2)).toEqual(secondsInYear);
   });
 
-  it('has method .agePlanet that returns age on a given planet', function() {
+  it('has method .agePlanet that returns age on a given planet (mercury)', function() {
     let planet = "mercury";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
     let mercuryYears = (earthYears*.24).toFixed(3);
-    console.log(mercuryYears);
     expect(testAge.agePlanet(planet)).toEqual(mercuryYears);
+  });
+
+  it('has method .agePlanet that returns age on a given planet (venus)', function() {
+    let planet = "venus";
+    let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
+    let venusYears = (earthYears*.62).toFixed(3);
+    expect(testAge.agePlanet(planet)).toEqual(venusYears);
+  });
+
+  it('has method .agePlanet that returns age on a given planet (mars)', function() {
+    let planet = "mars";
+    let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
+    let marsYears = (earthYears*1.88).toFixed(3);
+    expect(testAge.agePlanet(planet)).toEqual(marsYears);
+  });
+
+  it('has method .agePlanet that returns age on a given planet (jupiter)', function() {
+    let planet = "jupiter";
+    let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
+    let jupiterYears = (earthYears*11.86).toFixed(3);
+    expect(testAge.agePlanet(planet)).toEqual(jupiterYears);
   });
 
 
