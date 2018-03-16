@@ -3,6 +3,11 @@ export class Age {
     this.dob = new Date(dob); //dob expected in yyyy-mm-dd from html form, note this returns
   }
 
+  ageYears() {
+    let now = new Date(Date.now());
+    return (now.getFullYear() - this.dob.getFullYear());
+  }
+
   ageToSec() {
     return (Date.now() - Date.parse(this.dob))/1000;
   }

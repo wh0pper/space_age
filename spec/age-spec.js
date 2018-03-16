@@ -16,6 +16,10 @@ describe('Age', function() {
     expect(testAge.dob.toDateString()).toEqual('Tue Mar 13 1990');
   });
 
+  it('has method .ageYears that returns current age in years as decimal', function() {
+    expect(Math.floor(testAge.ageYears())).toEqual(28);
+  });
+
   it('has method .ageToSec that returns current age in seconds', function() {
     expect(Math.floor(testAge.ageToSec()/secondsInYear)).toEqual(nowObj.getFullYear() - testAge.dob.getFullYear()); //note this test will only pass for the next year
   });
