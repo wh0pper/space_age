@@ -76,7 +76,7 @@ describe('Age', function() {
     expect(testAge.lifeRemaining(expectancy)).toEqual(52);
   });
 
-  it('if user older than life expectancy .lifeRemaining() returns how far past expectancy they are', function() {
+  it('if user older than life expectancy .lifeRemaining() returns how far past expectancy they are as negative number', function() {
     let sex = 'female';
     let country = 'United States';
     let planet = 'earth';
