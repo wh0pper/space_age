@@ -57,7 +57,7 @@ describe('Age', function() {
   it('has method .lifeExpectancy() that makes API request to get life expectancy', function() {
     let sex = 'female';
     let country = 'United States';
-    expect(testAge.lifeExpectancy(sex, country)).toEqual(84.39759752289635)
+    expect(testAge.lifeExpectancy(sex, country)).toEqual(87.29614009290859);
   });
 
 
