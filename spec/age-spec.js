@@ -13,7 +13,7 @@ describe('Age', function() {
 
   it('has property containing DOB as a Date object', function() {
     expect(testAge.dob instanceof Date).toEqual(true);
-    expect(testAge.dob.toDateString()).toEqual('Tue Mar 13 1990')
+    expect(testAge.dob.toDateString()).toEqual('Tue Mar 13 1990');
   });
 
   it('has method .ageToSec that returns current age in seconds', function() {
@@ -28,8 +28,8 @@ describe('Age', function() {
 
   it('has method .agePlanet that returns age on a given planet', function() {
     let planet = "Mercury";
-    let earthYears = testAge.ageToSec()/Age.SECONDSINYEAR; //exact decimal value
-    let mercuryYears = earthYears*.24
+    let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
+    let mercuryYears = earthYears*.24;
     expect(testAge.agePlanet(planet)).toEqual(mercuryYears);
   });
 

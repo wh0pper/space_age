@@ -14,6 +14,14 @@ export class Age {
     return (date2 - date1)/1000;
   }
 
+  agePlanet(planet) {
+    let conversion = 1;
+    if (planet.toLowerCase() === 'mercury') {
+      conversion = .24;
+    }
+    let converted = conversion * this.ageToSec()/this.SECONDSINYEAR;
+    return converted;
+  }
 }
 
 Age.prototype.SECONDSINYEAR = 31536000;
