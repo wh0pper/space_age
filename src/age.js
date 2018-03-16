@@ -12,7 +12,8 @@ export class Age {
     date1 = new Date(date1);
     date2 = new Date(date2);
     return (date2 - date1)/1000;
-
   }
 
 }
+
+Age.prototype.SECONDSINYEAR = 31536000;
