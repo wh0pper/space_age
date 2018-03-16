@@ -29,35 +29,43 @@ describe('Age', function() {
   it('has method .agePlanet that returns age on a given planet (mercury)', function() {
     let planet = "mercury";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
-    let mercuryYears = (earthYears*.24).toFixed(3);
+    let mercuryYears = (earthYears/.24).toFixed(3);
     expect(testAge.agePlanet(planet)).toEqual(mercuryYears);
   });
 
   it('has method .agePlanet that returns age on a given planet (venus)', function() {
     let planet = "venus";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
-    let venusYears = (earthYears*.62).toFixed(3);
+    let venusYears = (earthYears/.62).toFixed(3);
     expect(testAge.agePlanet(planet)).toEqual(venusYears);
   });
 
   it('has method .agePlanet that returns age on a given planet (mars)', function() {
     let planet = "mars";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
-    let marsYears = (earthYears*1.88).toFixed(3);
+    let marsYears = (earthYears/1.88).toFixed(3);
     expect(testAge.agePlanet(planet)).toEqual(marsYears);
   });
 
   it('has method .agePlanet that returns age on a given planet (jupiter)', function() {
     let planet = "jupiter";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
-    let jupiterYears = (earthYears*11.86).toFixed(3);
+    let jupiterYears = (earthYears/11.86).toFixed(3);
     expect(testAge.agePlanet(planet)).toEqual(jupiterYears);
   });
 
-  it('has method .lifeExpectancy() that uses simple logic rules to calc a life expectancy', function() {
+  it('has method .lifeExpectancy() that uses simple logic rules to calc a life expectancy in years for a given planet (earth)', function() {
     let sex = 'female';
     let country = 'United States';
-    expect(testAge.lifeExpectancy(sex, country)).toEqual(80);
+    let planet = 'earth';
+    expect(testAge.lifeExpectancy(sex, country, planet)).toEqual(80);
+  });
+
+  it('has method .lifeExpectancy() that uses simple logic rules to calc a life expectancy in years for a given planet (jupiter)', function() {
+    let sex = 'female';
+    let country = 'United States';
+    let planet = 'jupiter';
+    expect(Math.round(testAge.lifeExpectancy(sex, country, planet))).toEqual(7);
   });
 
 

@@ -48,19 +48,20 @@ export class Age {
     }
 
     if (planet === 'mercury') {
-      average = average this.MERCYEARS;
+      average = average/this.MERCYEARS;
     } else if (planet === 'venus') {
-      conversion = this.VENUSYEARS;
+      average = average/this.VENUSYEARS;
     } else if (planet === 'mars') {
-      conversion = this.MARSYEARS;
+      average = average/this.MARSYEARS;
     } else if (planet === 'jupiter') {
-      conversion = this.JUPITERYEARS;
+      average = average/this.JUPITERYEARS;
     }
 
     return average;
   }
 }
 
+//conversion constants
 Age.prototype.SECONDSINYEAR = 31536000;
 Age.prototype.MERCYEARS = .24;
 Age.prototype.VENUSYEARS = .62;
