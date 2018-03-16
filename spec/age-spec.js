@@ -9,13 +9,12 @@ describe('Age', function() {
   });
 
   it('has property containing DOB as a Date object', function() {
-    expect(testAge.dob).toEqual('Thu Mar 15 1990 16:00:00 GMT-0800 (PST)');
     expect(testAge.dob instanceof Date).toEqual(true);
+    expect(testAge.dob.toDateString()).toEqual('Fri Mar 16 1990')
   });
 
   it('has method .toSec that converts DOB to seconds', function() {
-    expect(testAge.dob).toEqual('Thu Mar 15 1990 16:00:00 GMT-0800 (PST)');
-    expect(testAge.dob instanceof Date).toEqual(true);
+    expect(testAge.toSec()).toEqual(637545600);
   });
 
 });
