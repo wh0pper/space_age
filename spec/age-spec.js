@@ -27,9 +27,10 @@ describe('Age', function() {
   });
 
   it('has method .agePlanet that returns age on a given planet', function() {
-    let planet = "Mercury";
+    let planet = "mercury";
     let earthYears = testAge.ageToSec()/secondsInYear; //exact decimal value
-    let mercuryYears = earthYears*.24;
+    let mercuryYears = (earthYears*.24).toFixed(3);
+    console.log(mercuryYears);
     expect(testAge.agePlanet(planet)).toEqual(mercuryYears);
   });
 

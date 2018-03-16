@@ -16,11 +16,17 @@ export class Age {
 
   agePlanet(planet) {
     let conversion = 1;
-    if (planet.toLowerCase() === 'mercury') {
+    if (planet === 'mercury') {
       conversion = .24;
+    } else if (planet === 'venus') {
+      conversion = .62
+    } else if (planet === 'mars') {
+      conversion = 1.88
+    } else if (planet === 'jupiter') {
+      conversion = 11.86
     }
     let converted = conversion * this.ageToSec()/this.SECONDSINYEAR;
-    return converted;
+    return converted.toFixed(3);
   }
 }
 
