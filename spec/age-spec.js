@@ -21,8 +21,8 @@ describe('Age', function() {
   });
 
   it('has method .dateDifference that returns difference between two dates in seconds', function() {
-    let date1 = '2017/3/13'
-    let date2 = '03-13-2018'
+    let date1 = '2017/3/13';
+    let date2 = '03-13-2018';
     expect(testAge.dateDifference(date1,date2)).toEqual(secondsInYear);
   });
 
