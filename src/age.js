@@ -24,12 +24,13 @@ export class Age {
     } else if (planet === 'jupiter') {
       conversion = this.JUPITERYEARS;
     }
-    let converted = conversion * this.ageToSec()/this.SECONDSINYEAR;
+    let converted = (this.ageToSec()/this.SECONDSINYEAR)/conversion;
     return converted.toFixed(3);
   }
 
-  lifeExpectancy(sex, country) {
+  lifeExpectancy(sex, country, planet) {
     let average = 70;
+    country = country.toLowerCase();
     if (country === 'japan' || country === 'switzerland' || country === 'singapore' || country === 'australia' || country === 'spain') {
       average += 5;
     } else if (country === 'sierra leone' || country === 'angola' || country === 'nigeria' || country === 'somalia' || country === 'cameroon') {
@@ -45,6 +46,17 @@ export class Age {
     } else {
       average -= 5;
     }
+
+    if (planet === 'mercury') {
+      average = average this.MERCYEARS;
+    } else if (planet === 'venus') {
+      conversion = this.VENUSYEARS;
+    } else if (planet === 'mars') {
+      conversion = this.MARSYEARS;
+    } else if (planet === 'jupiter') {
+      conversion = this.JUPITERYEARS;
+    }
+
     return average;
   }
 }
