@@ -8,9 +8,14 @@ describe('Age', function() {
     testAge = new Age(testDOB);
   });
 
-  it('has properties containing DOB in string and millisecond format when instantiated', function() {
-    expect(testAge.dobString).toEqual('1990-03-16');
-    expect(testAge.dobMs).toEqual(637545600000);
+  it('has property containing DOB as a Date object', function() {
+    expect(testAge.dob).toEqual('Thu Mar 15 1990 16:00:00 GMT-0800 (PST)');
+    expect(testAge.dob instanceof Date).toEqual(true);
+  });
+
+  it('has method .toSec that converts DOB to seconds', function() {
+    expect(testAge.dob).toEqual('Thu Mar 15 1990 16:00:00 GMT-0800 (PST)');
+    expect(testAge.dob instanceof Date).toEqual(true);
   });
 
 });
