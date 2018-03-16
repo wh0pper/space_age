@@ -54,5 +54,11 @@ describe('Age', function() {
     expect(testAge.agePlanet(planet)).toEqual(jupiterYears);
   });
 
+  it('has method .lifeExpectancy() that makes API request to get life expectancy', function() {
+    let sex = 'female';
+    let country = 'United States';
+    expect(testAge.lifeExpectancy(sex, country)).toEqual(84.39759752289635)
+  });
+
 
 });

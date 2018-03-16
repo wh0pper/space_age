@@ -17,13 +17,13 @@ export class Age {
   agePlanet(planet) {
     let conversion = 1;
     if (planet === 'mercury') {
-      conversion = .24;
+      conversion = this.MERCYEARS;
     } else if (planet === 'venus') {
-      conversion = .62
+      conversion = this.VENUSYEARS;
     } else if (planet === 'mars') {
-      conversion = 1.88
+      conversion = this.MARSYEARS;
     } else if (planet === 'jupiter') {
-      conversion = 11.86
+      conversion = this.JUPITERYEARS;
     }
     let converted = conversion * this.ageToSec()/this.SECONDSINYEAR;
     return converted.toFixed(3);
@@ -31,3 +31,7 @@ export class Age {
 }
 
 Age.prototype.SECONDSINYEAR = 31536000;
+Age.prototype.MERCYEARS = .24;
+Age.prototype.VENUSYEARS = .62;
+Age.prototype.MARSYEARS = 1.88;
+Age.prototype.JUPITERYEARS = 11.86;
