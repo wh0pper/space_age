@@ -7,9 +7,12 @@ $(document).ready(function() {
   $("#dob_form").submit(function(event) {
     event.preventDefault();
     var dob = $("#dob_input").val();
-    var age = new Age(dob);
-    console.log(dob, age);
+    var user = new Age(dob);
+    var ageYears = user.ageYears();
+
+    $("#output").text(`Your precise age in years: ${ageYears}`)
   })
+
 
 
 })
