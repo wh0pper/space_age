@@ -56,7 +56,7 @@ export class Age {
     } else if (planet === 'jupiter') {
       average = average/this.JUPITERYEARS;
     }
-
+    
     return average;
   }
 }

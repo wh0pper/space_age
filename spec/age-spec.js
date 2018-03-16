@@ -68,5 +68,21 @@ describe('Age', function() {
     expect(Math.round(testAge.lifeExpectancy(sex, country, planet))).toEqual(7);
   });
 
+  it('has method .lifeRemaining() that determines how many years a user has left', function() {
+    let sex = 'female';
+    let country = 'United States';
+    let planet = 'earth';
+    let expectancy = testAge.lifeExpectancy(sex, country, planet)
+    expect(testAge.lifeRemaining(expectancy)).toEqual(52);
+  });
+
+  it('if user older than life expectancy .lifeRemaining() returns how far past expectancy they are', function() {
+    let sex = 'female';
+    let country = 'United States';
+    let planet = 'earth';
+    let newAge = new Age('1920-01-01');
+    let expectancy = testAge.lifeExpectancy(sex, country, planet)
+    expect(testAge.lifeRemaining(expectancy)).toEqual(28);
+  });
 
 });
