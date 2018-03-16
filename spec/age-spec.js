@@ -82,7 +82,7 @@ describe('Age', function() {
     let planet = 'earth';
     let newAge = new Age('1920-01-01');
     let expectancy = testAge.lifeExpectancy(sex, country, planet)
-    expect(testAge.lifeRemaining(expectancy)).toEqual(28);
+    expect(newAge.lifeRemaining(expectancy)).toEqual(-18);
   });
 
 });

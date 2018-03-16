@@ -56,9 +56,14 @@ export class Age {
     } else if (planet === 'jupiter') {
       average = average/this.JUPITERYEARS;
     }
-    
     return average;
   }
+
+  lifeRemaining(expectancy) {
+    return Math.round(expectancy - this.ageToSec()/this.SECONDSINYEAR);
+  }
+
+
 }
 
 //conversion constants
